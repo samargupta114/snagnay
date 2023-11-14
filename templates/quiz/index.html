@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<style>
+  
+</style>
+<body>
+  {% include "quiz/navbar.html" %}
+<br>
+<section style="padding: 13rem 0rem;" id="section-jumbotron" class="jumbotron jumbotron-fluid d-flex justify-content-center align-items-center">
+  <div class="container text-center">
+    <h1 class="display-1 text-info">Welcome</h1>
+    <p class="display-4 d-none d-sm-block">Give Your Exams Hassle Free.</p>
+    <p class="lead">We organize Exams for the best Experiences .</p>
+
+    
+
+    <p class="lead">Sign up if you haven't already </p>
+    <p><strong> Start Your Journey Here:</strong></p>
+    <a href="/student/studentsignup" class="btn btn-lg btn-info" style="padding-right: 35px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Student </a>
+    <a href="/teacher/teacherclick" class="btn btn-lg btn-info" style="padding-right: 35px;"><i class="fa fa-user-plus" aria-hidden="true"></i> Teacher</a>
+    
+  </div>  
+</section>
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>

@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+{% load bootstrap3 %}
+{% bootstrap_messages %}
+{% load widget_tweaks %}
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <style>
+
+        form{
+           margin: 50px; 
+          
+        }
+
+    </style>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js">
+</script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js">
+</script>
+
+  </head>
+  
+
+  <body>
+    {% include "quiz/navbar.html" %}
+ 
+
+
+<br><br><br>
+<h3 style="text-align: center;color: red;">STUDENT SIGNUP</h3>
+{% include "quiz/message.html"  %}
+
+<form method="POST" autocomplete="off" enctype="multipart/form-data">
+    {% csrf_token %}
+    <div class="form-row">
+      <div class="form-group col-md-6">
+        <label for="username">Email/username</label>
+        {% render_field userForm.username|attr:'required:true'  class="form-control" placeholder="use your mail as username" %}
+      </div>
+
+      <div class="form-group col-md-6">
+        <label for="inputPassword4">Password</label>
+        {% render_field userForm.password|attr:'required:true'  class="form-control" placeholder="Eg: Student@123" %}
+       
+      </div>
+    </div>
+
+    <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="first_name">First Name</label>
+          {% render_field userForm.first_name|attr:'required:true'  class="form-control" placeholder="First Name" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="last_name">Last Name</label>
+          {% render_field userForm.last_name|attr:'required:true'  class="form-control" placeholder="Last Name" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label for="mobile">Mobile</label>
+          {% render_field studentForm.mobile|attr:'required:true'  class="form-control" placeholder="Mobile" %}
+        </div>
+        <div class="form-group col-md-6">
+          <label for="address">Address</label>
+          {% render_field studentForm.address|attr:'required:true'  class="form-control" placeholder="Address" %}
+        </div>
+      </div>
+
+      <div class="form-row">
+        <div class="form-group col-md-12">
+          <label for="profile_pic">Profile Picture</label>
+          {% render_field studentForm.profile_pic|attr:'required:true' class="form-control" placeholder="" %}
+        </div>
+        
+      </div>
+
+
+    <button type="submit" class="btn btn-primary">Sign Up</button>
+  </form>
+
+  <h5 align=center>
+    Your password must follow these rules : <br>
+  1.Should have at least one number.<br>
+  2.Should have at least one uppercase and one lowercase character.<br>
+  3.Should have at least one special symbol.<br>
+  4.Should be between 6 to 20 characters long.<br>
+  </h5>
+
+<br><br>
+{% include "quiz/footer.html" %}
+  </body>
+
+
+
+</html>

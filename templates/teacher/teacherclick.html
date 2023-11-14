@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+{% load static %}
+<html lang="en" dir="ltr">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <style media="screen">
+   
+
+    .jumbotron h1 {
+      text-align: center;
+    }
+
+  </style>
+
+</head>
+
+<body>
+
+  {% include "quiz/navbar.html" %}
+
+  <div class="jumbotron" style=" padding:18rem 0rem;">
+    <h1 class="display-4">Hello, Teacher</h1>
+    <p class="lead">Welcome to SNAgNAy</p>
+    <hr class="my-4">
+    <p>You can access various features after Login.</p>
+    <p class="lead">
+      <a class="btn btn-danger btn-lg" href="teachersignup" role="button">Create Your Account</a>
+      <a class="btn btn-danger btn-lg" href="teacherlogin" role="button">Login</a>
+    </p>
+   
+  </div>
+  {% include "quiz/footer.html" %}
+</body>
+
+</html>
